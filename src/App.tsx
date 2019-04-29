@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Button } from 'antd-mobile';
+
 
 const App: React.FC = () => {
   return (
@@ -19,6 +21,7 @@ const App: React.FC = () => {
           Learn React
         </a>
       </header>
+      <Button>今天是什么情况</Button>
     </div>
   );
 }
