@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Button } from 'antd-mobile';
-
+import test from 'pages/test';
 
 const App: React.FC = () => {
   return (
