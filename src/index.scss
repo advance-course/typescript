@@ -23,4 +23,7 @@ code {
   height: 100%;
   max-width: 5.68rem;
   margin: 0 auto;
+
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
