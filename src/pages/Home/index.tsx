@@ -1,9 +1,9 @@
 import React from 'react';
 import { NavLink, Route } from 'react-router-dom';
 import { Flex } from 'antd-mobile';
-
 import Catalogue from 'pages/Catalogue';
 import Profile from 'pages/Profile';
+import './index.scss';
 
 interface HomeProps {}
 interface HomeState {}
@@ -11,15 +11,27 @@ interface HomeState {}
 class Home extends React.Component<HomeProps, HomeState> {
   render() {
     return (
-      <div style={{ position: 'fixed', height: '100%', width: '100%', top: 0 }}>
-        <Flex>
-          <NavLink to="/catalogue" activeClassName="active">目录</NavLink>
-          <NavLink to="/profile" activeClassName="active">我的</NavLink>
+      <Flex className="home_container" direction="column">
+        <div className="content">
+          <Route path="/catalogue" component={Catalogue} />
+          <Route path="/profile" component={Profile} />
+        </div>
+        
+        <Flex className="nav" justify="around">
+          <NavLink to="/catalogue" className="catalogue" activeClassName="active">
+            <Flex direction="column">
+              <div className="icon" />
+              <div className="label">课程</div>
+            </Flex>
+          </NavLink>
+          <NavLink to="/profile" className="profile" activeClassName="active">
+            <Flex direction="column">
+              <div className="icon" />
+              <div className="label">我的</div>
+            </Flex>
+          </NavLink>
         </Flex>
-
-        <Route path="/catalogue" component={Catalogue} />
-        <Route path="/profile" component={Profile} />
-      </div>
+      </Flex>
     );
   }
 }
