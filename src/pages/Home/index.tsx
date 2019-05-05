@@ -18,13 +18,13 @@ class Home extends React.Component<HomeProps, HomeState> {
         </div>
         
         <Flex className="nav" justify="around">
-          <NavLink to="/catalogue" className="catalogue" activeClassName="active">
+          <NavLink to="/catalogue" className="navitem catalogue" activeClassName="active">
             <Flex direction="column">
               <div className="icon" />
               <div className="label">课程</div>
             </Flex>
           </NavLink>
-          <NavLink to="/profile" className="profile" activeClassName="active">
+          <NavLink to="/profile" className="navitem profile" activeClassName="active">
             <Flex direction="column">
               <div className="icon" />
               <div className="label">我的</div>
