@@ -13,12 +13,12 @@ class Home extends React.Component<HomeProps, HomeState> {
     return (
       <Flex className="home_container" direction="column">
         <div className="content">
-          <Route path="/catalogue" component={Catalogue} />
+          <Route exact path="/" component={Catalogue} />
           <Route path="/profile" component={Profile} />
         </div>
         
         <Flex className="nav" justify="around">
-          <NavLink to="/catalogue" className="navitem catalogue" activeClassName="active">
+          <NavLink to="/" className="navitem catalogue" activeClassName="active">
             <Flex direction="column">
               <div className="icon" />
               <div className="label">课程</div>

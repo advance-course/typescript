@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, HashRouter, Switch } from 'react-router-dom';
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import Home from 'pages/Home';
 import * as serviceWorker from './serviceWorker';
 import './index.scss';
 
 const App: React.FC = () => (
-  <HashRouter>
+  <BrowserRouter>
     <Switch>
       <Route path="/" component={Home} />
     </Switch>    
-  </HashRouter>
+  </BrowserRouter>
 );
 
 ReactDOM.render(<App />, document.getElementById('root'));
